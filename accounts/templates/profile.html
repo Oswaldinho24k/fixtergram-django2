@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+
+{%block content%}
+	<div class="profile">
+		{%if profile.background%}
+		<div 
+		class="background" 
+		style="background-image:url({{profile.background.url}})"></div>
+		{%else%}
+		<div class="background"></div>
+		{%endif%}
+		<section>
+			{%if profile.image%}
+			<img src="{{profile.image.url}}" alt="{{profile.user.username}}" class="profile_img">
+			{%else%}
+			<img src="http://www.stickpng.com/assets/images/585e4bf3cb11b227491c339a.png" alt="" class="profile_img">
+			{%endif%}
+			<div class="basic-info">
+				<h1>{{profile.user.username}}</h1>
+				<h2>{{profile.title}}</h2>
+				<hr>
+				<h3>{{profile.birthday}}</h3>
+				<p>{{profile.bio}}</p>
+			</div>
+
+			<div class="detail"></div>
+		</section>
+	</div>
+{%endblock content%}
