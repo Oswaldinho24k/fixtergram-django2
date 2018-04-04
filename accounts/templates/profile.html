@@ -21,6 +21,8 @@
 				<hr>
 				<h3>{{profile.birthday}}</h3>
 				<p>{{profile.bio}}</p>
+				<a href="{%url 'accounts:edit'%}" 
+				onclick="window.open(this.href,'_blank', 'height=500px,width=500px'); return false;">Editar</a>
 			</div>
 
 			<div class="detail"></div>

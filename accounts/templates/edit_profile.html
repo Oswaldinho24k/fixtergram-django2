@@ -1,0 +1,15 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="log-container">
+	
+	<div>
+		<h3>Edita tu info</h3>
+		<form action="." method="post" enctype='multipart/form-data'>
+			{%csrf_token%}
+			{{form.as_p}}
+			<button type="submit">Guardar</button>
+		</form>
+	</div>
+</div>
+{%endblock content%}

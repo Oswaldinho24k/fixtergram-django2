@@ -1,0 +1,18 @@
+{%extends 'base.html'%}
+
+{%block content%}
+<div class="log-container">
+	
+	<div>
+		<h3>Regístrate</h3>
+		<form action="{%url 'accounts:registro'%}" method="post">
+			{%csrf_token%}
+			{{form.as_p}}
+			<button type="submit">Registrar</button>
+		</form>
+		<h6 align="center">
+			¿Y tienes cuenta?,  <a href="{%url 'accounts:login'%}">Inicia</a>
+			</h6>
+	</div>
+</div>
+{%endblock content%}
