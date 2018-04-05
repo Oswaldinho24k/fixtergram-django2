@@ -5,15 +5,18 @@ from .forms import UserRegistrationForm, ProfileForm
 from django.utils.decorators import method_decorator
 from django.contrib.auth.decorators import login_required
 
+from posts.models import Post
+
 
 
 class ProfileView(View):
 	@method_decorator(login_required)
 	def get(self, request):
 		queryset = Profile.objects.get(id=request.user.profile.id)
+		#user_posts = Post.objects.all().filter(author=request.user)
 		template_name = 'profile.html'
 		context = {
-			'profile':queryset
+			'profile':queryset,
 		}
 
 		return render(request, template_name, context)

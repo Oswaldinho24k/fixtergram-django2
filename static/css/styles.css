@@ -20,6 +20,7 @@ nav{
 	align-items: center;
 	position: fixed;
 	top: 0;
+
 }
  nav a{
  	height: 100%;
@@ -88,7 +89,9 @@ nav{
 	align-items: center;
 	margin-top: -5%;
 }
-
+.main{
+	margin-top: 60px;
+}
 
 
 

@@ -21,11 +21,13 @@ from django.conf import settings
 from django.views.static import serve
 
 from accounts import urls as accounts_urls
+from posts import urls as posts_urls
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include(accounts_urls, namespace='accounts')),
+    path('posts/', include(posts_urls, namespace='posts')),
     url('', include('social_django.urls', namespace='social')),
     url(
         regex=r'^media/(?P<path>.*)$',

@@ -25,7 +25,15 @@
 				onclick="window.open(this.href,'_blank', 'height=500px,width=500px'); return false;">Editar</a>
 			</div>
 
-			<div class="detail"></div>
+			<div class="detail">
+			{%for post in profile.user.posts.all%}
+				<div>
+					{{post.title}} 
+				</div>
+		{%empty%}
+		No posts :(
+		{%endfor%}
+			</div>
 		</section>
 	</div>
 {%endblock content%}

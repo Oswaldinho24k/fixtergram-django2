@@ -1,0 +1,12 @@
+{%extends 'base.html'%}
+{%block content%}
+	<div>
+		{%for post in posts%}
+		<div>
+			{{post.title}} by: {{post.author}}
+		</div>
+		{%empty%}
+		No posts :(
+		{%endfor%}
+	</div>
+{%endblock content%}
