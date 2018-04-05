@@ -5,6 +5,9 @@
 	
 	<div>
 		<h3>Inicia Sesión prro</h3>
+		<div>
+			<a href="{% url 'social:begin' 'github'%}">Github</a>
+		</div>
 		<form action="{%url 'accounts:login'%}" method="post">
 			{%csrf_token%}
 			{{form.as_p}}

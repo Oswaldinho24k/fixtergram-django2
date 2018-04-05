@@ -26,6 +26,7 @@ from accounts import urls as accounts_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include(accounts_urls, namespace='accounts')),
+    url('', include('social_django.urls', namespace='social')),
     url(
         regex=r'^media/(?P<path>.*)$',
         view=serve,
